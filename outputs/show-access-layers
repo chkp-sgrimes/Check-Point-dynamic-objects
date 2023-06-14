@@ -1,0 +1,40 @@
+#show access-layer -f json
+{
+  "access-layers" : [ {
+    "uid" : "28defce3-4d7c-4926-b7a5-da2b10239131",
+    "name" : "API Network",
+    "type" : "access-layer",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "icon" : "ApplicationFirewall/rulebase",
+    "color" : "black"
+  }, {
+    "uid" : "4d556a8e-3fe3-4c39-95a6-44c37118a22a",
+    "name" : "internet-https-rules",
+    "type" : "access-layer",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "icon" : "ApplicationFirewall/rulebase",
+    "color" : "black"
+  }, {
+    "uid" : "8a994dd3-993e-4c0c-92a1-a8630b153f4c",
+    "name" : "Network",
+    "type" : "access-layer",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "icon" : "ApplicationFirewall/rulebase",
+    "color" : "black"
+  } ],
+  "from" : 1,
+  "to" : 3,
+  "total" : 3
+}

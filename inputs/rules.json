@@ -1,0 +1,12 @@
+{
+"rules": [
+        {
+          "name": "internet",
+          "source": [ "internal_network" ],
+          "destination" :["All_Internet"],
+          "services" : ["https"]
+        }
+        ]
+
+
+}

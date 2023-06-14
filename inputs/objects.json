@@ -1,0 +1,28 @@
+{
+  "objects" : [
+    {
+      "name" : "generic-17216115-tdom",
+      "object-type" : "data-center-server",
+      "type" : "generic",
+      "url" : "http://172.16.1.15:5000/inputs/tdom1.json",
+      "interval" : "15"
+    },
+    {
+      "object-type" : "updatable-object",
+      "uid-in-updatable-objects-repository" : "d00802e8-0570-4851-8900-0a7c2ca80a9a"
+    },
+    {
+      "name" : "networkfeed-17216115-atlassian",
+      "object-type" : "network-feed",
+      "feed-url" : "http://172.16.1.40:5000/inputs/atlassian.txt",
+      "feed-format" : "Flat List",
+      "feed-type" : "IP Address",
+      "fields-delimiter" : "\n",
+      "ignore-warnings" : "true"
+    }
+  ]
+}
+
+
+
+

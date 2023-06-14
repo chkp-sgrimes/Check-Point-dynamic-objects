@@ -1,0 +1,1322 @@
+{
+  "uid" : "8a994dd3-993e-4c0c-92a1-a8630b153f4c",
+  "name" : "Network",
+  "rulebase" : [ {
+    "uid" : "8eae08ac-0a64-4e92-a861-46506ef1712e",
+    "name" : "admin access",
+    "type" : "access-section",
+    "from" : 1,
+    "to" : 1,
+    "rulebase" : [ {
+      "uid" : "3f93e955-e35a-4b08-a2a1-d2c52f8e3b36",
+      "name" : "3200",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 1,
+      "track" : {
+        "type" : "29e53e3d-23bf-48fe-b6b1-d59bd88036f9",
+        "per-session" : false,
+        "per-connection" : false,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "0d03c739-f687-43d5-b6ce-ee7483ecb8e5" ],
+      "source-negate" : false,
+      "destination" : [ "2155f8a0-b923-6448-9b97-3d51d760cac1" ],
+      "destination-negate" : false,
+      "service" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "6c488338-8eec-4103-ad21-cd461ac2c472",
+      "action-settings" : {
+        "enable-identity-captive-portal" : false
+      },
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1685644754370,
+          "iso-8601" : "2023-06-01T14:39-0400"
+        },
+        "last-modifier" : "admin",
+        "creation-time" : {
+          "posix" : 1685644624956,
+          "iso-8601" : "2023-06-01T14:37-0400"
+        },
+        "creator" : "admin"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    } ]
+  }, {
+    "uid" : "6e0272ee-4304-42d7-b6a2-c69df8254658",
+    "name" : "internet",
+    "type" : "access-section",
+    "from" : 2,
+    "to" : 6,
+    "rulebase" : [ {
+      "uid" : "dd35da1c-44da-4a14-afb6-50c510c3921d",
+      "name" : "internet-https",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 2,
+      "track" : {
+        "type" : "29e53e3d-23bf-48fe-b6b1-d59bd88036f9",
+        "per-session" : false,
+        "per-connection" : false,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "0d03c739-f687-43d5-b6ce-ee7483ecb8e5" ],
+      "source-negate" : false,
+      "destination" : [ "b0791ee0-6ebb-481c-bb17-88b977b32505" ],
+      "destination-negate" : false,
+      "service" : [ "97aeb443-9aea-11d5-bd16-0090272ccb30" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "ea28da66-c5ed-11e2-bc66-aa5c6188709b",
+      "action-settings" : { },
+      "inline-layer" : "4d556a8e-3fe3-4c39-95a6-44c37118a22a",
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1684346501823,
+          "iso-8601" : "2023-05-17T14:01-0400"
+        },
+        "last-modifier" : "admin",
+        "creation-time" : {
+          "posix" : 1684346427158,
+          "iso-8601" : "2023-05-17T14:00-0400"
+        },
+        "creator" : "admin"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    }, {
+      "uid" : "09fb2d98-e90d-4e96-be08-1fd99a4e35b5",
+      "name" : "internet",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 3,
+      "track" : {
+        "type" : "598ead32-aa42-4615-90ed-f51a5928d41d",
+        "per-session" : false,
+        "per-connection" : true,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "0d03c739-f687-43d5-b6ce-ee7483ecb8e5" ],
+      "source-negate" : false,
+      "destination" : [ "b0791ee0-6ebb-481c-bb17-88b977b32505", "2155f8a0-b923-6448-9b97-3d51d760cac1" ],
+      "destination-negate" : false,
+      "service" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "6c488338-8eec-4103-ad21-cd461ac2c472",
+      "action-settings" : {
+        "enable-identity-captive-portal" : false
+      },
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1651180761414,
+          "iso-8601" : "2022-04-28T17:19-0400"
+        },
+        "last-modifier" : "admin",
+        "creation-time" : {
+          "posix" : 1651180761414,
+          "iso-8601" : "2022-04-28T17:19-0400"
+        },
+        "creator" : "admin"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    }, {
+      "uid" : "c36540d9-5ce5-4681-b090-2f01c2fbd6ca",
+      "name" : "synology access",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 4,
+      "track" : {
+        "type" : "598ead32-aa42-4615-90ed-f51a5928d41d",
+        "per-session" : false,
+        "per-connection" : true,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "2155f8a0-b923-6448-9b97-3d51d760cac1" ],
+      "source-negate" : false,
+      "destination" : [ "5a262123-0597-451b-9b59-d8784b593610" ],
+      "destination-negate" : false,
+      "service" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "6c488338-8eec-4103-ad21-cd461ac2c472",
+      "action-settings" : {
+        "enable-identity-captive-portal" : false
+      },
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1684344831612,
+          "iso-8601" : "2023-05-17T13:33-0400"
+        },
+        "last-modifier" : "admin",
+        "creation-time" : {
+          "posix" : 1652793361978,
+          "iso-8601" : "2022-05-17T09:16-0400"
+        },
+        "creator" : "admin"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    }, {
+      "uid" : "060aa2af-f8b7-4bae-a6d9-7ff2665d15d3",
+      "name" : "automation access",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 5,
+      "track" : {
+        "type" : "598ead32-aa42-4615-90ed-f51a5928d41d",
+        "per-session" : false,
+        "per-connection" : true,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "5b18b166-4453-4f05-90e9-c43d8fe2c781" ],
+      "source-negate" : false,
+      "destination" : [ "aad372d6-6af7-450f-b532-471d8b92523d", "9bfe9c84-edb0-4a8e-8a8d-b14e1562e295" ],
+      "destination-negate" : false,
+      "service" : [ "cd082d9a-44a6-4cef-a17d-5541029adfb3" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "6c488338-8eec-4103-ad21-cd461ac2c472",
+      "action-settings" : {
+        "enable-identity-captive-portal" : false
+      },
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1685473984985,
+          "iso-8601" : "2023-05-30T15:13-0400"
+        },
+        "last-modifier" : "admin",
+        "creation-time" : {
+          "posix" : 1684788021866,
+          "iso-8601" : "2023-05-22T16:40-0400"
+        },
+        "creator" : "admin"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    }, {
+      "uid" : "60e2929c-4371-402b-bf57-3f2efca62cad",
+      "name" : "Cleanup rule",
+      "type" : "access-rule",
+      "domain" : {
+        "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name" : "SMC User",
+        "domain-type" : "domain"
+      },
+      "rule-number" : 6,
+      "track" : {
+        "type" : "598ead32-aa42-4615-90ed-f51a5928d41d",
+        "per-session" : false,
+        "per-connection" : true,
+        "accounting" : false,
+        "enable-firewall-session" : false,
+        "alert" : "none"
+      },
+      "source" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "source-negate" : false,
+      "destination" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "destination-negate" : false,
+      "service" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "service-negate" : false,
+      "service-resource" : "",
+      "vpn" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "action" : "6c488338-8eec-4103-ad21-cd461ac2c473",
+      "action-settings" : { },
+      "content" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "content-negate" : false,
+      "content-direction" : "any",
+      "time" : [ "97aeb369-9aea-11d5-bd16-0090272ccb30" ],
+      "custom-fields" : {
+        "field-1" : "",
+        "field-2" : "",
+        "field-3" : ""
+      },
+      "meta-info" : {
+        "lock" : "unlocked",
+        "validation-state" : "ok",
+        "last-modify-time" : {
+          "posix" : 1625153558398,
+          "iso-8601" : "2021-07-01T11:32-0400"
+        },
+        "last-modifier" : "System",
+        "creation-time" : {
+          "posix" : 1625153558398,
+          "iso-8601" : "2021-07-01T11:32-0400"
+        },
+        "creator" : "System"
+      },
+      "comments" : "",
+      "enabled" : true,
+      "install-on" : [ "6c488338-8eec-4103-ad21-cd461ac2c476" ],
+      "available-actions" : {
+        "edit" : "true",
+        "delete" : "true",
+        "clone" : "not_supported"
+      }
+    } ]
+  } ],
+  "objects-dictionary" : [ {
+    "uid" : "aad372d6-6af7-450f-b532-471d8b92523d",
+    "name" : "172-16.1.40-ubuntu-22",
+    "type" : "host",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "ipv4-address" : "172.16.1.40",
+    "interfaces" : [ ],
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "Objects/host",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1684346627721,
+        "iso-8601" : "2023-05-17T14:03-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1684346627721,
+        "iso-8601" : "2023-05-17T14:03-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "6c488338-8eec-4103-ad21-cd461ac2c472",
+    "name" : "Accept",
+    "type" : "RulebaseAction",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921617527,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921617527,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "Actions/actionsAccept",
+    "comments" : "Accept",
+    "display-name" : "Accept",
+    "customFields" : null
+  }, {
+    "uid" : "b0791ee0-6ebb-481c-bb17-88b977b32505",
+    "name" : "All_Internet",
+    "type" : "address-range",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "ipv4-address-first" : "0.0.0.0",
+    "ipv4-address-last" : "255.255.255.255",
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "All Internet Addresses",
+    "color" : "sienna",
+    "icon" : "Objects/ip",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1625128348522,
+        "iso-8601" : "2021-07-01T04:32-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1625128348522,
+        "iso-8601" : "2021-07-01T04:32-0400"
+      },
+      "creator" : "System"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "97aeb369-9aea-11d5-bd16-0090272ccb30",
+    "name" : "Any",
+    "type" : "CpmiAnyObject",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "General/globalsAny",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921550089,
+        "iso-8601" : "2023-04-19T12:25-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921550089,
+        "iso-8601" : "2023-04-19T12:25-0400"
+      },
+      "creator" : "System"
+    },
+    "read-only" : true,
+    "available-actions" : {
+      "edit" : "false",
+      "delete" : "false",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "6c488338-8eec-4103-ad21-cd461ac2c473",
+    "name" : "Drop",
+    "type" : "RulebaseAction",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921617537,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921617537,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "Actions/actionsDrop",
+    "comments" : "Drop",
+    "display-name" : "Drop",
+    "customFields" : null
+  }, {
+    "uid" : "2155f8a0-b923-6448-9b97-3d51d760cac1",
+    "name" : "grimes3200",
+    "type" : "simple-gateway",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "interfaces" : [ {
+      "uid" : "06acbb7a-cdaf-43ee-a195-1f4816c6666a",
+      "name" : "Mgmt",
+      "network-interface-type" : "ethernet",
+      "ipv4-address" : "192.168.1.1",
+      "ipv4-network-mask" : "255.255.255.0",
+      "ipv4-mask-length" : 24,
+      "ipv6-address" : "",
+      "comments" : "",
+      "color" : "black",
+      "icon" : "NetworkObjects/network",
+      "topology" : "automatic",
+      "topology-automatic-calculation" : "internal",
+      "topology-settings" : {
+        "ip-address-behind-this-interface" : "network defined by the interface ip and net mask",
+        "interface-leads-to-dmz" : false
+      },
+      "anti-spoofing" : true,
+      "anti-spoofing-settings" : {
+        "action" : "prevent",
+        "exclude-packets" : false,
+        "spoof-tracking" : "log"
+      },
+      "security-zone" : false
+    }, {
+      "uid" : "0bbb30e4-9c8e-4d9c-a83a-569f1d53790b",
+      "name" : "eth2",
+      "network-interface-type" : "ethernet",
+      "ipv4-address" : "172.16.1.1",
+      "ipv4-network-mask" : "255.255.255.0",
+      "ipv4-mask-length" : 24,
+      "ipv6-address" : "",
+      "comments" : "",
+      "color" : "black",
+      "icon" : "NetworkObjects/network",
+      "topology" : "automatic",
+      "topology-automatic-calculation" : "internal",
+      "topology-settings" : {
+        "ip-address-behind-this-interface" : "network defined by the interface ip and net mask",
+        "interface-leads-to-dmz" : false
+      },
+      "anti-spoofing" : true,
+      "anti-spoofing-settings" : {
+        "action" : "prevent",
+        "exclude-packets" : false,
+        "spoof-tracking" : "log"
+      },
+      "security-zone" : false
+    }, {
+      "uid" : "153d78e5-acfd-4685-ba76-91fcc1609d2a",
+      "name" : "eth1",
+      "network-interface-type" : "ethernet",
+      "ipv4-address" : "10.0.0.95",
+      "ipv4-network-mask" : "255.255.255.0",
+      "ipv4-mask-length" : 24,
+      "ipv6-address" : "",
+      "comments" : "",
+      "color" : "black",
+      "icon" : "NetworkObjects/network",
+      "topology" : "automatic",
+      "topology-automatic-calculation" : "external",
+      "anti-spoofing" : true,
+      "anti-spoofing-settings" : {
+        "action" : "prevent",
+        "exclude-packets" : false,
+        "spoof-tracking" : "log"
+      },
+      "security-zone" : false
+    } ],
+    "ipv4-address" : "172.16.1.1",
+    "dynamic-ip" : false,
+    "version" : "R81.20",
+    "os-name" : "Gaia",
+    "hardware" : "3000 Appliance",
+    "sic-name" : "cn=cp_mgmt,o=grimes3200..u96q7z",
+    "sic-state" : "communicating",
+    "firewall" : true,
+    "firewall-settings" : {
+      "auto-maximum-limit-for-concurrent-connections" : true,
+      "maximum-limit-for-concurrent-connections" : 25000,
+      "auto-calculate-connections-hash-table-size-and-memory-pool" : true,
+      "connections-hash-size" : 32768,
+      "memory-pool-size" : 6,
+      "maximum-memory-pool-size" : 30
+    },
+    "vpn" : true,
+    "vpn-settings" : {
+      "useClientlessVpn" : false,
+      "maximum-concurrent-ike-negotiations" : 1000,
+      "maximum-concurrent-tunnels" : 10000,
+      "vpn-domain-type" : "addresses_behind_gw",
+      "vpn-domain-exclude-external-ip-addresses" : false,
+      "link-selection" : {
+        "ip-selection" : "use-main-address"
+      },
+      "remote-access" : {
+        "support-l2tp" : false,
+        "allow-vpn-clients-to-route-traffic" : false,
+        "support-nat-traversal-mechanism" : true,
+        "nat-traversal-service" : {
+          "uid" : "97aeb390-9aea-11d5-bd16-0090272ccb30",
+          "name" : "VPN1_IPSEC_encapsulation",
+          "type" : "service-udp",
+          "domain" : {
+            "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+            "name" : "Check Point Data",
+            "domain-type" : "data domain"
+          },
+          "accept-replies" : true,
+          "port" : "2746",
+          "match-by-protocol-signature" : false,
+          "override-default-settings" : false,
+          "session-timeout" : 40,
+          "use-default-session-timeout" : true,
+          "match-for-any" : true,
+          "sync-connections-on-cluster" : true,
+          "aggressive-aging" : {
+            "enable" : true,
+            "timeout" : 15,
+            "use-default-timeout" : true,
+            "default-timeout" : 0
+          },
+          "keep-connections-open-after-policy-installation" : false,
+          "comments" : "Check Point VPN-1 SecuRemote IPSEC Transport Encapsulation Protocol",
+          "color" : "firebrick",
+          "icon" : "Services/UDPService",
+          "tags" : [ ],
+          "meta-info" : {
+            "lock" : "unlocked",
+            "validation-state" : "ok",
+            "last-modify-time" : {
+              "posix" : 1681921581001,
+              "iso-8601" : "2023-04-19T12:26-0400"
+            },
+            "last-modifier" : "System",
+            "creation-time" : {
+              "posix" : 1681921581001,
+              "iso-8601" : "2023-04-19T12:26-0400"
+            },
+            "creator" : "System"
+          },
+          "read-only" : true,
+          "available-actions" : {
+            "edit" : "false",
+            "delete" : "false",
+            "clone" : "true"
+          }
+        },
+        "support-visitor-mode" : true,
+        "visitor-mode-service" : {
+          "uid" : "97aeb443-9aea-11d5-bd16-0090272ccb30",
+          "name" : "https",
+          "type" : "service-tcp",
+          "domain" : {
+            "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+            "name" : "Check Point Data",
+            "domain-type" : "data domain"
+          },
+          "enable-tcp-resource" : false,
+          "sync-connections-on-cluster" : true,
+          "use-delayed-sync" : false,
+          "delayed-sync-value" : 30,
+          "port" : "443",
+          "protocol" : "ENC-HTTP",
+          "match-by-protocol-signature" : false,
+          "override-default-settings" : false,
+          "session-timeout" : 3600,
+          "use-default-session-timeout" : true,
+          "match-for-any" : true,
+          "aggressive-aging" : {
+            "enable" : true,
+            "timeout" : 60,
+            "use-default-timeout" : false,
+            "default-timeout" : 60
+          },
+          "keep-connections-open-after-policy-installation" : false,
+          "comments" : "HTTP protocol over TLS/SSL",
+          "color" : "red",
+          "icon" : "Services/TCPService",
+          "tags" : [ ],
+          "meta-info" : {
+            "lock" : "unlocked",
+            "validation-state" : "ok",
+            "last-modify-time" : {
+              "posix" : 1681921592193,
+              "iso-8601" : "2023-04-19T12:26-0400"
+            },
+            "last-modifier" : "System",
+            "creation-time" : {
+              "posix" : 1681921592193,
+              "iso-8601" : "2023-04-19T12:26-0400"
+            },
+            "creator" : "System"
+          },
+          "read-only" : true,
+          "available-actions" : {
+            "edit" : "false",
+            "delete" : "false",
+            "clone" : "true"
+          }
+        },
+        "visitor-mode-interface" : "All IPs"
+      },
+      "office-mode" : {
+        "mode" : "off"
+      },
+      "authentication" : { }
+    },
+    "application-control" : true,
+    "url-filtering" : false,
+    "threat-prevention-mode" : "custom",
+    "ips" : true,
+    "threat-emulation" : false,
+    "threat-extraction" : false,
+    "data-loss-prevention" : false,
+    "qos" : false,
+    "anti-bot" : true,
+    "anti-virus" : true,
+    "content-awareness" : true,
+    "zero-phishing" : false,
+    "save-logs-locally" : true,
+    "send-alerts-to-server" : [ "grimes3200" ],
+    "send-logs-to-server" : [ "grimes3200" ],
+    "send-logs-to-backup-server" : [ ],
+    "logs-settings" : {
+      "rotate-log-by-file-size" : false,
+      "rotate-log-file-size-threshold" : 1000,
+      "rotate-log-on-schedule" : false,
+      "alert-when-free-disk-space-below-metrics" : "mbytes",
+      "alert-when-free-disk-space-below" : true,
+      "alert-when-free-disk-space-below-threshold" : 3000,
+      "alert-when-free-disk-space-below-type" : "popup alert",
+      "delete-when-free-disk-space-below-metrics" : "mbytes",
+      "delete-when-free-disk-space-below" : true,
+      "delete-when-free-disk-space-below-threshold" : 5000,
+      "before-delete-keep-logs-from-the-last-days" : false,
+      "before-delete-keep-logs-from-the-last-days-threshold" : 3664,
+      "before-delete-run-script" : false,
+      "before-delete-run-script-command" : "",
+      "stop-logging-when-free-disk-space-below-metrics" : "mbytes",
+      "stop-logging-when-free-disk-space-below" : false,
+      "stop-logging-when-free-disk-space-below-threshold" : 100,
+      "reject-connections-when-free-disk-space-below-threshold" : false,
+      "reserve-for-packet-capture-metrics" : "mbytes",
+      "reserve-for-packet-capture-threshold" : 500,
+      "delete-index-files-when-index-size-above-metrics" : "mbytes",
+      "delete-index-files-when-index-size-above" : false,
+      "delete-index-files-when-index-size-above-threshold" : 100000,
+      "delete-index-files-older-than-days" : false,
+      "delete-index-files-older-than-days-threshold" : 14,
+      "forward-logs-to-log-server" : false,
+      "perform-log-rotate-before-log-forwarding" : false,
+      "update-account-log-every" : 3600,
+      "detect-new-citrix-ica-application-names" : false,
+      "turn-on-qos-logging" : true,
+      "distribute-logs-between-all-active-servers" : false
+    },
+    "identity-awareness" : false,
+    "platform-portal-settings" : {
+      "enabled" : true,
+      "portal-web-settings" : {
+        "main-url" : "https://192.168.1.1/",
+        "ip-address" : "192.168.1.1",
+        "aliases" : [ ]
+      },
+      "accessibility" : {
+        "allow-access-from" : "RULE_BASE"
+      }
+    },
+    "usercheck-portal-settings" : {
+      "enabled" : true,
+      "portal-web-settings" : {
+        "main-url" : "http://172.16.1.1/UserCheck",
+        "ip-address" : "172.16.1.1",
+        "aliases" : [ ]
+      },
+      "accessibility" : {
+        "allow-access-from" : "INTERNAL_INTERFACES",
+        "internal-access-settings" : {
+          "undefined" : false,
+          "dmz" : false,
+          "vpn" : true
+        }
+      }
+    },
+    "proxy-settings" : {
+      "use-custom-proxy" : false
+    },
+    "nat-hide-internal-interfaces" : true,
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "fetch-policy" : [ ],
+    "advanced-settings" : {
+      "sam" : {
+        "forward-to-other-sam-servers" : true,
+        "use-early-versions" : {
+          "enabled" : false
+        },
+        "purge-sam-file" : {
+          "enabled" : false,
+          "purge-when-size-reaches-to" : 100
+        }
+      },
+      "connection-persistence" : "rematch-connections"
+    },
+    "hit-count" : true,
+    "enable-https-inspection" : false,
+    "application-control-and-url-filtering-settings" : {
+      "global-settings-mode" : "use_global_settings"
+    },
+    "https-inspection" : {
+      "bypass-on-failure" : {
+        "override-profile" : false,
+        "profile-value" : true
+      },
+      "site-categorization-allow-mode" : {
+        "override-profile" : false,
+        "profile-value" : "hold"
+      },
+      "deny-untrusted-server-cert" : {
+        "override-profile" : false,
+        "profile-value" : false
+      },
+      "deny-revoked-server-cert" : {
+        "override-profile" : false,
+        "profile-value" : true
+      },
+      "deny-expired-server-cert" : {
+        "override-profile" : false,
+        "profile-value" : false
+      }
+    },
+    "ips-update-policy" : "gateway automatic update",
+    "comments" : "",
+    "color" : "black",
+    "icon" : "NetworkObjects/management",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1683749078434,
+        "iso-8601" : "2023-05-10T16:04-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1651176473559,
+        "iso-8601" : "2022-04-28T16:07-0400"
+      },
+      "creator" : "System"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "false",
+      "clone" : "not_supported"
+    }
+  }, {
+    "uid" : "97aeb443-9aea-11d5-bd16-0090272ccb30",
+    "name" : "https",
+    "type" : "service-tcp",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "enable-tcp-resource" : false,
+    "sync-connections-on-cluster" : true,
+    "use-delayed-sync" : false,
+    "delayed-sync-value" : 30,
+    "port" : "443",
+    "protocol" : "ENC-HTTP",
+    "match-by-protocol-signature" : false,
+    "override-default-settings" : false,
+    "session-timeout" : 3600,
+    "use-default-session-timeout" : true,
+    "match-for-any" : true,
+    "aggressive-aging" : {
+      "enable" : true,
+      "timeout" : 60,
+      "use-default-timeout" : false,
+      "default-timeout" : 60
+    },
+    "keep-connections-open-after-policy-installation" : false,
+    "comments" : "HTTP protocol over TLS/SSL",
+    "color" : "red",
+    "icon" : "Services/TCPService",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921592193,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921592193,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "read-only" : true,
+    "available-actions" : {
+      "edit" : "false",
+      "delete" : "false",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "ea28da66-c5ed-11e2-bc66-aa5c6188709b",
+    "name" : "Inner Layer",
+    "type" : "Global",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921618302,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921618302,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "ApplicationFirewall/Rulebase",
+    "comments" : "Apply inline layer in case of rule match",
+    "customFields" : null
+  }, {
+    "uid" : "0d03c739-f687-43d5-b6ce-ee7483ecb8e5",
+    "name" : "internal_network",
+    "type" : "network",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "broadcast" : "allow",
+    "subnet4" : "172.16.1.0",
+    "mask-length4" : 24,
+    "subnet-mask" : "255.255.255.0",
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "NetworkObjects/network",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1651180751264,
+        "iso-8601" : "2022-04-28T17:19-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1651180751264,
+        "iso-8601" : "2022-04-28T17:19-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "4d556a8e-3fe3-4c39-95a6-44c37118a22a",
+    "name" : "internet-https-rules",
+    "type" : "access-layer",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "shared" : false,
+    "parent-layer" : "8a994dd3-993e-4c0c-92a1-a8630b153f4c",
+    "applications-and-url-filtering" : false,
+    "content-awareness" : false,
+    "mobile-access" : false,
+    "firewall" : true,
+    "implicit-cleanup-action" : "drop",
+    "comments" : "",
+    "color" : "black",
+    "icon" : "ApplicationFirewall/rulebase",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1684346499441,
+        "iso-8601" : "2023-05-17T14:01-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1684346499441,
+        "iso-8601" : "2023-05-17T14:01-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "598ead32-aa42-4615-90ed-f51a5928d41d",
+    "name" : "Log",
+    "type" : "Track",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921616973,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921616973,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "Track/tracksLog",
+    "comments" : "Tracks network information and rule matches.",
+    "customFields" : null
+  }, {
+    "uid" : "29e53e3d-23bf-48fe-b6b1-d59bd88036f9",
+    "name" : "None",
+    "type" : "Track",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921616861,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921616861,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "General/globalsNone",
+    "comments" : "No tracking.",
+    "customFields" : null
+  }, {
+    "uid" : "9bfe9c84-edb0-4a8e-8a8d-b14e1562e295",
+    "name" : "outside-interface",
+    "type" : "host",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "ipv4-address" : "10.0.0.94",
+    "interfaces" : [ ],
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "Objects/host",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1685473968898,
+        "iso-8601" : "2023-05-30T15:12-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1685473968898,
+        "iso-8601" : "2023-05-30T15:12-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "5b18b166-4453-4f05-90e9-c43d8fe2c781",
+    "name" : "personal_laptop",
+    "type" : "host",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "ipv4-address" : "10.0.0.90",
+    "interfaces" : [ ],
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "Objects/host",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1684787745366,
+        "iso-8601" : "2023-05-22T16:35-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1684787745366,
+        "iso-8601" : "2023-05-22T16:35-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "6c488338-8eec-4103-ad21-cd461ac2c476",
+    "name" : "Policy Targets",
+    "type" : "Global",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "color" : "none",
+    "meta-info" : {
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921616601,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921616601,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "tags" : [ ],
+    "icon" : "General/globalsAny",
+    "comments" : "The policy target gateways",
+    "customFields" : null
+  }, {
+    "uid" : "cd082d9a-44a6-4cef-a17d-5541029adfb3",
+    "name" : "ssh_version_2",
+    "type" : "service-tcp",
+    "domain" : {
+      "uid" : "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+      "name" : "Check Point Data",
+      "domain-type" : "data domain"
+    },
+    "enable-tcp-resource" : false,
+    "sync-connections-on-cluster" : true,
+    "use-delayed-sync" : false,
+    "delayed-sync-value" : 30,
+    "port" : "22",
+    "protocol" : "SSH2",
+    "match-by-protocol-signature" : false,
+    "override-default-settings" : false,
+    "session-timeout" : 3600,
+    "use-default-session-timeout" : true,
+    "match-for-any" : false,
+    "aggressive-aging" : {
+      "enable" : true,
+      "timeout" : 600,
+      "use-default-timeout" : true,
+      "default-timeout" : 0
+    },
+    "keep-connections-open-after-policy-installation" : false,
+    "comments" : "Secure Shell, version 1.x block",
+    "color" : "blue",
+    "icon" : "Services/TCPService",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1681921583877,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "last-modifier" : "System",
+      "creation-time" : {
+        "posix" : 1681921583877,
+        "iso-8601" : "2023-04-19T12:26-0400"
+      },
+      "creator" : "System"
+    },
+    "read-only" : true,
+    "available-actions" : {
+      "edit" : "false",
+      "delete" : "false",
+      "clone" : "true"
+    }
+  }, {
+    "uid" : "5a262123-0597-451b-9b59-d8784b593610",
+    "name" : "synologyNAS",
+    "type" : "host",
+    "domain" : {
+      "uid" : "41e821a0-3720-11e3-aa6e-0800200c9fde",
+      "name" : "SMC User",
+      "domain-type" : "domain"
+    },
+    "ipv4-address" : "10.0.0.100",
+    "interfaces" : [ ],
+    "nat-settings" : {
+      "auto-rule" : false
+    },
+    "comments" : "",
+    "color" : "black",
+    "icon" : "Objects/host",
+    "tags" : [ ],
+    "meta-info" : {
+      "lock" : "unlocked",
+      "validation-state" : "ok",
+      "last-modify-time" : {
+        "posix" : 1655144882020,
+        "iso-8601" : "2022-06-13T14:28-0400"
+      },
+      "last-modifier" : "admin",
+      "creation-time" : {
+        "posix" : 1655144882020,
+        "iso-8601" : "2022-06-13T14:28-0400"
+      },
+      "creator" : "admin"
+    },
+    "read-only" : false,
+    "available-actions" : {
+      "edit" : "true",
+      "delete" : "true",
+      "clone" : "true"
+    }
+  } ],
+  "from" : 1,
+  "to" : 6,
+  "total" : 6
+}
