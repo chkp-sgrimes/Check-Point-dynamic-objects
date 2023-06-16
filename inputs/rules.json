@@ -1,5 +1,5 @@
 {
-"rules": [
+"objects": [
         {
           "name": "internet",
           "source": [ "internal_network" ],

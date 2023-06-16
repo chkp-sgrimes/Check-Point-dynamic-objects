@@ -1,5 +1,6 @@
 from cpapi import APIClientArgs
 from cpapi import APIClient
+from itertools import chain
 
 
 class cpClient:
@@ -62,6 +63,16 @@ class cpClient:
             self.response = self.client.api_call(command, payload)
         # self.response = self.client.api_call(command, payload)
         return None
+
+    def get_all_objects(self):
+        target_objs = ['network', 'host']
+        all_gens = chain()
+
+        for target in target_objs:
+            result_gen = self.client.gen_api_query("show-objects", details_level="full", payload={"type": target})
+            all_gens = chain(all_gens, result_gen)
+
+        return all_gens
 
     def rules(self):
         pass
