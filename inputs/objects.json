@@ -9,13 +9,24 @@
     },
     {
       "object-type" : "updatable-object",
-      "uid-in-updatable-objects-repository" : "d00802e8-0570-4851-8900-0a7c2ca80a9a"
+      "uid-in-updatable-objects-repository" : "d00802e8-0570-4851-8900-0a7c2ca80a9a",
+      "name" : "Africa"
     },
     {
       "name" : "networkfeed-17216115-atlassian",
       "object-type" : "network-feed",
       "feed-url" : "http://172.16.1.40:5000/inputs/atlassian.txt",
       "feed-format" : "Flat List",
+      "feed-type" : "IP Address",
+      "fields-delimiter" : "\n",
+      "ignore-warnings" : "true"
+    },
+    {
+      "name" : "networkfeed-source-atlassian",
+      "object-type" : "network-feed",
+      "feed-url" : "https://ip-ranges.atlassian.com/",
+      "feed-format" : "JSON",
+      "json-query" : ".items[].cidr",
       "feed-type" : "IP Address",
       "fields-delimiter" : "\n",
       "ignore-warnings" : "true"
