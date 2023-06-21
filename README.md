@@ -10,3 +10,5 @@ To use this collection
 3. Invoke the virtual environment "source [path to the environment]/bin/activate"
 4. Install the Check Point python SDK "pip install cp-mgmt-api-sdk"
 5. If you would like to make objects available locally, install flask "pip install Flask"
+6. Revise the hostname or IP address, account and password in cpclient.py
+7. run the add_objects.py, del_objects.py, or show_objects.py mods with "python add_objects.py" 
