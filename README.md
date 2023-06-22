@@ -11,5 +11,5 @@ To use this collection
 4. Install the Check Point python SDK "pip install cp-mgmt-api-sdk"
 5. If you would like to make objects available locally, install flask "pip install Flask"
 6. Revise the hostname or IP address, account and password in cpclient.py
-7. run the add_objects.py, del_objects.py, or show_objects.py mods with "python add_objects.py" 
+7. run the add_objects.py, del_objects.py, or show_objects.py mods with "python [file_name].py" 
 The first time any mod is run you'll need to provide a "y" so that the SDK can create the fingerprints.txt file.
