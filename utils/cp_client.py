@@ -18,7 +18,7 @@ class CpClient:
 
     def logout(self) -> list[dict]:
         self.response = self.client.api_call("logout")
-        return self.
+        return self.response
 
     def publish(self):
         self.response = self.client.api_call("publish")
@@ -39,11 +39,15 @@ class CpClient:
     def gen_api_command(self, command: str, payload=None) -> list[dict]:
 
         try:
-            response = self.client.gen_api_query(command, payload)
-            print(f"command:\n%s", response)
-            return response
+            response = self.client.gen_api_query(command, payload=payload)
+            if response.gi_code.co_argcount > 0:
+                print(f"successfully executed {command}")
+                return response
+            else:
+                raise Exception(response)
         except Exception as e:
             print(e)
+            return response
 
     def show_rulebase(self):
         pass
@@ -60,11 +64,12 @@ class CpClient:
         for o in objs:
             command = "add-" + o["object-type"]
 
-            # payload as dict
-            payload = {key: val for key, val in o.items() if key != "object-type"}
+            # payload as dict.  updatable object are different
+            if command == "add-updatable-object":
+                payload = {key: val for key, val in o.items() if key == "uid-in-updatable-objects-repository"}
+            else:
+                payload = {key: val for key, val in o.items() if key != "object-type"}
             self.response = self.api_command(command, payload)
-            # self.response = self.client.api_call(command, payload)
-        # self.response = self.client.api_call(command, payload)
         return None
 
     def del_objects(self, objs: list[dict]) -> None:
@@ -84,10 +89,14 @@ class CpClient:
         target_objs = ['network', 'host']
         # all_gens = chain()
         gens = []
+        result_gen: None
 
         for target in target_objs:
-            result_gen = self.client.gen_api_query("show-objects", details_level="full", payload={"type": target})
-            # all_gens = chain(all_gens, result_gen)
+            result_gen = self.gen_api_command("show-objects", payload={"type": target})
+            try:
+                print(next(result_gen))
+            except StopIteration:
+                pass
             gens.append({"type": target, "objects": result_gen})
         return gens
 

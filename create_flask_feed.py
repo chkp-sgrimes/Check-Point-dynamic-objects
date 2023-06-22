@@ -15,10 +15,10 @@ app.config["DEBUG"] = True
 
 
 # flask was started in /users/[user name]/objects
-@app.route('/outputs/<path:path>', methods=["get"])
+@app.route('/inputs/<path:path>', methods=["get"])
 def download(path):
     try:
-        return send_from_directory('outputs', path)
+        return send_from_directory('inputs', path)
         # return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
         # return send_from_directory(directory='outputs', filename=filename, as_attachment=True, cache_timeout=0)
     except FileNotFoundError:
