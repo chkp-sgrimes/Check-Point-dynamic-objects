@@ -1,5 +1,6 @@
 import json
 from utils.cp_client import CpClient
+from utils.request_handler import RequestChecker
 
 
 def read_json(jsonfile: str) -> list[dict]:
@@ -15,18 +16,16 @@ def read_json(jsonfile: str) -> list[dict]:
 
 
 def main():
-    """
-    Main function.
-    """
-    objects: list[dict]
-    client: object
+    objs = read_json("objects.json")
 
-    client = CpClient()
-    objects = read_json('objects.json')
-    client.login()
-    client.del_objects(objects)
-    client.publish()
-    client.logout()
+    cp_client = CpClient()
+    cp_client.login()
+
+    checker = RequestChecker(cp_client)
+    corrected_objects = checker.check_objects(objs, "delete")
+    cp_client.delete_objects(corrected_objects)
+    # cp_client.publish()
+    cp_client.logout()
 
 
 if __name__ == '__main__':

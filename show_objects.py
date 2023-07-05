@@ -8,7 +8,7 @@ def main():
 
     client = CpClient()
     res = client.login()
-    res = client.get_all_objects()
+    res = client.get_all_objects(['host','network'])
     res = client.logout()
 
 
